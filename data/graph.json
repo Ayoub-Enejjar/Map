@@ -1,0 +1,19 @@
+{
+  "nodes": [
+    { "id": "PAR", "name": "Paris" },
+    { "id": "LYO", "name": "Lyon" },
+    { "id": "MAR", "name": "Marseille" },
+    { "id": "BOR", "name": "Bordeaux" },
+    { "id": "TOU", "name": "Toulouse" },
+    { "id": "NIC", "name": "Nice" }
+  ],
+  "edges": [
+    { "source": "PAR", "target": "LYO", "weight": 465 },
+    { "source": "PAR", "target": "BOR", "weight": 590 },
+    { "source": "BOR", "target": "TOU", "weight": 245 },
+    { "source": "TOU", "target": "MAR", "weight": 405 },
+    { "source": "LYO", "target": "MAR", "weight": 315 },
+    { "source": "LYO", "target": "NIC", "weight": 470 },
+    { "source": "MAR", "target": "NIC", "weight": 200 }
+  ]
+}

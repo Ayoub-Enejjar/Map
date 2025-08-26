@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>City Shortest Path</title>
+  <link rel="stylesheet" href="/style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>Shortest Path Between Cities</h1>
+    <p>Select two cities to compute the shortest path (Dijkstra).</p>
+
+    <div class="controls">
+      <label>
+        From:
+        <select id="from"></select>
+      </label>
+      <label>
+        To:
+        <select id="to"></select>
+      </label>
+      <button id="compute">Compute</button>
+    </div>
+
+    <div class="result" id="result"></div>
+
+    <div class="graph" id="graph"></div>
+  </div>
+
+  <script src="/app.js"></script>
+</body>
+</html>
