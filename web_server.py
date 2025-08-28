@@ -2,11 +2,7 @@ import json
 import os
 from http.server import HTTPServer, SimpleHTTPRequestHandler
 from urllib.parse import urlparse, parse_qs
-from flask import Flask
-from flask_cors import CORS
 
-app = Flask(__name__)
-CORS(app)
 
 # Load graph data from data/graph.json
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))

@@ -18,7 +18,8 @@ try {
 } catch (e) {
   console.error('Failed to load graph.json:', e.message);
 }
-
+// graph is always a solid object wi
+// dth nodes and edges arrays
 // Build adjacency list from edges
 function buildAdjacency(graph) {
   const adj = new Map();
