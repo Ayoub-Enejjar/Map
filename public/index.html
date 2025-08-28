@@ -1,32 +1,53 @@
+
 <!doctype html>
 <html lang="en">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>City Shortest Path</title>
-  <link rel="icon"  type="image/x-icon"  href="/favicon.ico" />
+  <title>Shortest Path Algorithm Visualizer</title>
+  <meta name="description" content="Interactive visualization of Dijkstra's shortest path algorithm between French cities" />
+  <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/style.css" />
 </head>
 <body>
   <div class="container">
-    <h1>Shortest Path Between Cities</h1>
-    <p>Select two cities to compute the shortest path (Dijkstra).</p>
+    <header class="header">
+      <h1>Shortest Path Visualizer</h1>
+      <p class="subtitle">Discover optimal routes between French cities using Dijkstra's algorithm</p>
+    </header>
 
-    <div class="controls">
-      <label>
-        From:
-        <select id="from"></select>
-      </label>
-      <label>
-        To:
-        <select id="to"></select>
-      </label>
-      <button id="compute">Compute</button>
-    </div>
+    <section class="controls">
+      <div class="form-group">
+        <label for="from">From City</label>
+        <select id="from" aria-label="Select departure city">
+          <option value="">Choose departure...</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="to">To City</label>
+        <select id="to" aria-label="Select destination city">
+          <option value="">Choose destination...</option>
+        </select>
+      </div>
+      <button id="compute" class="compute-btn" aria-label="Calculate shortest path">
+        <span class="btn-text">Find Route</span>
+        <span class="btn-loading" style="display: none;">
+          <span class="spinner"></span>
+          Computing...
+        </span>
+      </button>
+    </section>
 
-    <div class="result" id="result"></div>
+    <section class="result fade-in" id="result" role="region" aria-label="Route calculation results">
+      <p>Select two cities above to calculate the shortest path between them.</p>
+    </section>
 
-    <div class="graph" id="graph"></div>
+    <section class="graph-container">
+      <div class="graph" id="graph" role="img" aria-label="Interactive graph showing cities and connections"></div>
+    </section>
   </div>
 
   <script src="/app.js"></script>

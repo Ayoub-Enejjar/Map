@@ -20,7 +20,7 @@ try {
 }
 // graph is always a solid object wi
 // dth nodes and edges arrays
-// Build adjacency list from edges
+// Build adjacency list from edges for Dijkstra's algorit
 function buildAdjacency(graph) {
   const adj = new Map();
   graph.nodes.forEach(n => adj.set(n.id, []));
@@ -33,6 +33,11 @@ function buildAdjacency(graph) {
   return adj;
 }
 
+/* the main goal of the program is to find the shortest pah between two nodes using 
+Dijkstra's algorithm 
+can you please teach me how it works? 
+everythig so that's why i wrote it as this way f
+ */
 function dijkstra(adj, start, goal) {
   const dist = new Map();
   const prev = new Map();
